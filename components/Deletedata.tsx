@@ -1,4 +1,5 @@
-import { getData } from "@/app/page";
+import { data } from "@/app/components/Display";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -9,16 +10,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { getData } from "./fetchdDta";
 
-export function Deletedata({ ele, setNotes }: any) {
+export function Deletedata({ ele, setNotes }:{ele:data,setNotes:(notes: data[]) => void}) {
   const erasedata = async () => {
     try {
-      const res = await fetch(`http://localhost:9000/tasks/${ele._id}`, {
+      const res = await fetch(`${process.env.BACKEND_URL}tasks/${ele._id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });
       if (res.ok) {
-        let data = await getData();
+        const data = await getData();
         setNotes(data);
       }
     } catch (error) {

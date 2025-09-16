@@ -1,6 +1,6 @@
 "use client";
-import { description } from "@/app/components/Chart";
-import { getData } from "@/app/page";
+
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -21,15 +21,18 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import React, { useState } from "react";
+import { data } from "@/app/components/Display";
+import { getData } from "./fetchdDta";
+import { PlusIcon } from "lucide-react";
 
-export function AddData({ ele, setNotes }: { setNotes: any; ele: any }) {
+export function AddData({ setNotes }: {  setNotes: (notes: data[]) => void;}) {
   const [topic, setTopic] = useState("");
   const [des, setDes] = useState("");
-  const [status, setStatus] = useState(ele.status);
+  const [status, setStatus] = useState("");
   async function submitdata(e: React.FormEvent) {
     // console.log("trigger", topic, des);
     // e.preventDefault();
-    const res = await fetch("http://localhost:9000/tasks", {
+    const res = await fetch(`${process.env.BACKEND_URL}tasks`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: topic, description: des }),
@@ -38,7 +41,7 @@ export function AddData({ ele, setNotes }: { setNotes: any; ele: any }) {
     // let data = await res.json();
     // console.log(data);
     if (res.ok) {
-      let data = await getData();
+      const data = await getData();
       setNotes(data);
       setTopic("");
       setDes("");
@@ -51,7 +54,7 @@ export function AddData({ ele, setNotes }: { setNotes: any; ele: any }) {
           <Button variant="outline">Add New Note</Button>
         </DialogTrigger>
         <DialogTrigger className="sm:hidden flex">
-          <Button variant="outline">Add</Button>
+          <Button variant="outline"><PlusIcon/></Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>

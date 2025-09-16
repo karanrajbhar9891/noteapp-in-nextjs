@@ -7,17 +7,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { data } from "./Display";
 
 export default function Card1({
   data,
   setNotes,
-}: {
-  data: any;
-  setNotes: any;
-}) {
+}:{data:data[],setNotes: (notes: data[]) => void;}) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      {data.map((ele: any, index: number) => (
+      {data.map((ele: data, index: number) => (
         <Card
           key={index}
           className="bg-white border border-gray-100 shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 rounded-2xl overflow-hidden"

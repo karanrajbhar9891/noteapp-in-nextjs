@@ -18,15 +18,16 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import { data } from "./Display";
 
 export default function Navbar({
   notes,
   setNotes,
   data,
 }: {
-  notes: any;
-  setNotes: any;
-  data: any;
+  notes: data[];
+  setNotes: (notes: data[]) => void;
+  data: data[];
 }) {
   const [status, setStatus] = useState("");
   const [serachValue, setSeachValue] = useState("");
@@ -38,18 +39,18 @@ export default function Navbar({
     if (value === "all") {
       setNotes(data);
     }
-    const filterData1 = filterData.filter((ele: any) => ele.status === value);
+    const filterData1 = filterData.filter((ele: data) => ele.status === value);
     if (filterData1.length > 0) {
       setNotes(filterData1);
     }
   };
 
-  const searchData = (e: any) => {
+  const searchData = (e:  React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.value && e.target.value === "") {
       setNotes(data);
     }
     setSeachValue(e.target.value);
-    const serachData1 = serachData.filter((ele: any) =>
+    const serachData1 = serachData.filter((ele: data) =>
       ele?.title?.toLowerCase().includes(e.target.value.toLowerCase())
     );
     if (serachData1.length > 0) {
@@ -58,13 +59,13 @@ export default function Navbar({
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full flex bg-gradient-to-r from-blue-500 to-indigo-600 shadow-md">
+    <nav className="sticky top-0 z-50 w-full flex justify-between bg-gradient-to-r from-blue-500 to-indigo-600 shadow-md ">
       {/* Title */}
 
       {/* Controls */}
-      <div className="flex flex-wrap gap-4 pb-3 items-center justify-around w-full">
+      <div className="flex flex-wrap gap-4 pb-3 items-center justify-around sm:w-full w-[80%]">
         <div className="py-3">
-          <h3 className="text-xl font-bold text-white tracking-wide">
+          <h3 className="text-sm md:text-xl font-bold text-white tracking-wide">
             All Notes
           </h3>
         </div>
@@ -130,12 +131,16 @@ export default function Navbar({
             </DialogContent>
           </Dialog>
         </div>
+        
+          
+                    
 
-        {/* Add Button */}
-        <div className="">
-          <AddData setNotes={setNotes} ele={data} />
-        </div>
+        
       </div>
+      <div className="flex items-center pb-3 md:pr-2">
+        <AddData setNotes={setNotes}/>
+      </div>
+      
     </nav>
   );
 }

@@ -1,4 +1,4 @@
-import { getData } from "@/app/page";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -20,9 +20,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { DropdownMenu } from "./ui/dropdown-menu";
+import { data } from "@/app/components/Display";
+import { getData } from "./fetchdDta";
 
-export function Editdata({ ele, setNotes }: any) {
-  console.log(ele);
+export function Editdata({ ele, setNotes }:{ele:data,setNotes:(notes: data[]) => void}) {
   const [title, setTitle] = useState(ele.title);
   const [description, setDescription] = useState(ele.description);
   const [status, setStatus] = useState(ele.status);
@@ -30,7 +31,7 @@ export function Editdata({ ele, setNotes }: any) {
   const handleEdit = async (e: React.FormEvent) => {
     try {
       // e.preventDefault();
-      const res = await fetch(`http://localhost:9000/tasks/${ele._id}`, {
+      const res = await fetch(`${process.env.BACKEND_URL}tasks/${ele._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -39,9 +40,9 @@ export function Editdata({ ele, setNotes }: any) {
           status: status,
         }),
       });
-      console.log(res, "res");
+
       if (res.ok) {
-        let data = await getData();
+        const data = await getData();
         setNotes(data);
       }
     } catch (error) {

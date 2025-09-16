@@ -39,17 +39,17 @@ export default function Page() {
 
   const [isloading, setIsLoading] = useState(false);
 
-  const handleSignUp = async (e: any) => {
+  const handleSignUp = async () => {
     try {
       setIsLoading(true);
-      let data = await fetch("http://localhost:9000/user/register", {
+      const data = await fetch(`${process.env.BACKEND_URL}user/register`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
         },
         body: JSON.stringify(signupDetails),
       });
-      let res = await data.json();
+      const res = await data.json();
       if (res.message) {
         setIsLoading(false);
         alert(res.message);
@@ -62,17 +62,17 @@ export default function Page() {
     }
   };
 
-  const handleLogin = async (e: any) => {
+  const handleLogin = async () => {
     try {
       setIsLoading(true);
-      let data = await fetch("http://localhost:9000/user/login", {
+      const data = await fetch(`${process.env.BACKEND_URL}user/login`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
         },
         body: JSON.stringify(logindetails),
       });
-      let res = await data.json();
+      const res = await data.json();
       if (res.message) {
         setIsLoading(false);
         alert(res.message);
