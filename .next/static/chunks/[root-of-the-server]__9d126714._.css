@@ -213,7 +213,6 @@
 
 @layer theme {
   :root, :host {
-    --color-red-600: #e40014;
     --color-blue-100: #dbeafe;
     --color-blue-400: #54a2ff;
     --color-blue-500: #3080ff;
@@ -263,7 +262,6 @@
 
   @supports (color: color(display-p3 0 0 0)) {
     :root, :host {
-      --color-red-600: color(display-p3 .830323 .140383 .133196);
       --color-blue-100: color(display-p3 .869214 .915931 .989622);
       --color-blue-400: color(display-p3 .397443 .62813 .992116);
       --color-blue-500: color(display-p3 .266422 .491219 .988624);
@@ -280,7 +278,6 @@
 
   @supports (color: lab(0% 0 0)) {
     :root, :host {
-      --color-red-600: lab(48.4493% 77.4328 61.5452);
       --color-blue-100: lab(92.0301% -2.24757 -11.6453);
       --color-blue-400: lab(65.0361% -1.42062 -56.9803);
       --color-blue-500: lab(54.1736% 13.3368 -74.6839);
@@ -1366,11 +1363,6 @@
     border-width: 0;
   }
 
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-
   .border-\[1\.5px\] {
     border-style: var(--tw-border-style);
     border-width: 1.5px;
@@ -1425,10 +1417,6 @@
 
   .border-input {
     border-color: var(--input);
-  }
-
-  .border-red-600 {
-    border-color: var(--color-red-600);
   }
 
   .border-sidebar-border {
@@ -3042,24 +3030,6 @@
   @media (min-width: 48rem) {
     .md\:flex-row {
       flex-direction: row;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:items-start {
-      align-items: flex-start;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:justify-around {
-      justify-content: space-around;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:justify-baseline {
-      justify-content: baseline;
     }
   }
 
