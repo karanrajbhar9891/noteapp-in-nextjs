@@ -31,7 +31,8 @@ export function Editdata({ ele, setNotes }:{ele:data,setNotes:(notes: data[]) =>
   const handleEdit = async (e: React.FormEvent) => {
     try {
       // e.preventDefault();
-      const res = await fetch(`${process.env.BACKEND_URL}tasks/${ele._id}`, {
+      console.log("edit data")
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}tasks/${ele._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

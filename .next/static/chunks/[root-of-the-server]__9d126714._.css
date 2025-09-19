@@ -834,6 +834,10 @@
     margin-top: auto;
   }
 
+  .mr-1 {
+    margin-right: calc(var(--spacing) * 1);
+  }
+
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -1578,8 +1582,20 @@
     padding: calc(var(--spacing) * 6);
   }
 
+  .p-\[1\.5\], .p-\[1\.5px\] {
+    padding: 1.5px;
+  }
+
   .p-\[3px\] {
     padding: 3px;
+  }
+
+  .p-\[4px\] {
+    padding: 4px;
+  }
+
+  .p-\[px\] {
+    padding: px;
   }
 
   .px-\(--cell-size\) {
@@ -1762,6 +1778,10 @@
 
   .text-accent-foreground {
     color: var(--accent-foreground);
+  }
+
+  .text-black {
+    color: var(--color-black);
   }
 
   .text-blue-100 {

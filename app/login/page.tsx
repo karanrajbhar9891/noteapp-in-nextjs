@@ -42,7 +42,7 @@ export default function Page() {
   const handleSignUp = async () => {
     try {
       setIsLoading(true);
-      const data = await fetch(`${process.env.BACKEND_URL}user/register`, {
+      const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}user/register`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

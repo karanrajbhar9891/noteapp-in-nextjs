@@ -15,7 +15,7 @@ import { getData } from "./fetchdDta";
 export function Deletedata({ ele, setNotes }:{ele:data,setNotes:(notes: data[]) => void}) {
   const erasedata = async () => {
     try {
-      const res = await fetch(`${process.env.BACKEND_URL}tasks/${ele._id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}tasks/${ele._id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });

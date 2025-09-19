@@ -31,8 +31,8 @@ export function AddData({ setNotes }: {  setNotes: (notes: data[]) => void;}) {
   const [status, setStatus] = useState("");
   async function submitdata(e: React.FormEvent) {
     // console.log("trigger", topic, des);
-    // e.preventDefault();
-    const res = await fetch(`${process.env.BACKEND_URL}tasks`, {
+    e.preventDefault();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}tasks`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: topic, description: des }),
@@ -54,7 +54,7 @@ export function AddData({ setNotes }: {  setNotes: (notes: data[]) => void;}) {
           <Button variant="outline">Add New Note</Button>
         </DialogTrigger>
         <DialogTrigger className="sm:hidden flex">
-          <Button variant="outline"><PlusIcon/></Button>
+          <span className="p-[4px] rounded-md bg-white text-black mr-1"><PlusIcon/></span>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>

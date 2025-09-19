@@ -180,7 +180,7 @@ __turbopack_context__.s({
 });
 async function getData() {
     try {
-        const data = await fetch(`${process.env.BACKEND_URL}tasks`);
+        const data = await fetch(`${("TURBOPACK compile-time value", "https://note-app-backend-sand.vercel.app/")}tasks`);
         const res = await data.json();
         console.log(res, "data from function");
         return res.tasks;
@@ -206,7 +206,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$fetchdDta$2e$t
 function Deletedata({ ele, setNotes }) {
     const erasedata = async ()=>{
         try {
-            const res = await fetch(`${process.env.BACKEND_URL}tasks/${ele._id}`, {
+            const res = await fetch(`${("TURBOPACK compile-time value", "https://note-app-backend-sand.vercel.app/")}tasks/${ele._id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -597,7 +597,8 @@ function Editdata({ ele, setNotes }) {
     const handleEdit = async (e)=>{
         try {
             // e.preventDefault();
-            const res = await fetch(`${process.env.BACKEND_URL}tasks/${ele._id}`, {
+            console.log("edit data");
+            const res = await fetch(`${("TURBOPACK compile-time value", "https://note-app-backend-sand.vercel.app/")}tasks/${ele._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -627,12 +628,12 @@ function Editdata({ ele, setNotes }) {
                         children: "Edit"
                     }, void 0, false, {
                         fileName: "[project]/components/Editdata.tsx",
-                        lineNumber: 57,
+                        lineNumber: 58,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Editdata.tsx",
-                    lineNumber: 56,
+                    lineNumber: 57,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogContent"], {
@@ -643,12 +644,12 @@ function Editdata({ ele, setNotes }) {
                                 children: "Edit Note"
                             }, void 0, false, {
                                 fileName: "[project]/components/Editdata.tsx",
-                                lineNumber: 61,
+                                lineNumber: 62,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Editdata.tsx",
-                            lineNumber: 60,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -662,7 +663,7 @@ function Editdata({ ele, setNotes }) {
                                             children: "Topic"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Editdata.tsx",
-                                            lineNumber: 65,
+                                            lineNumber: 66,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -675,13 +676,13 @@ function Editdata({ ele, setNotes }) {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/components/Editdata.tsx",
-                                            lineNumber: 66,
+                                            lineNumber: 67,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Editdata.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 65,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -692,7 +693,7 @@ function Editdata({ ele, setNotes }) {
                                             children: "Description"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Editdata.tsx",
-                                            lineNumber: 77,
+                                            lineNumber: 78,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -705,13 +706,13 @@ function Editdata({ ele, setNotes }) {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/components/Editdata.tsx",
-                                            lineNumber: 78,
+                                            lineNumber: 79,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Editdata.tsx",
-                                    lineNumber: 76,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -722,7 +723,7 @@ function Editdata({ ele, setNotes }) {
                                             children: "Status"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Editdata.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 90,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -737,12 +738,12 @@ function Editdata({ ele, setNotes }) {
                                                         placeholder: "Status"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Editdata.tsx",
-                                                        lineNumber: 97,
+                                                        lineNumber: 98,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Editdata.tsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 97,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -752,7 +753,7 @@ function Editdata({ ele, setNotes }) {
                                                             children: "Pending"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Editdata.tsx",
-                                                            lineNumber: 100,
+                                                            lineNumber: 101,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -760,31 +761,31 @@ function Editdata({ ele, setNotes }) {
                                                             children: "Completed"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Editdata.tsx",
-                                                            lineNumber: 101,
+                                                            lineNumber: 102,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/Editdata.tsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 100,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Editdata.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 91,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Editdata.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 89,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Editdata.tsx",
-                            lineNumber: 63,
+                            lineNumber: 64,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogFooter"], {
@@ -796,12 +797,12 @@ function Editdata({ ele, setNotes }) {
                                         children: "Cancel"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Editdata.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 109,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/Editdata.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 108,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogClose"], {
@@ -810,35 +811,35 @@ function Editdata({ ele, setNotes }) {
                                         children: "Save changes"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Editdata.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 112,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/Editdata.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Editdata.tsx",
-                            lineNumber: 106,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Editdata.tsx",
-                    lineNumber: 59,
+                    lineNumber: 60,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/Editdata.tsx",
-            lineNumber: 55,
+            lineNumber: 56,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/Editdata.tsx",
-        lineNumber: 54,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 }
@@ -1067,8 +1068,8 @@ function AddData({ setNotes }) {
     const [status, setStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     async function submitdata(e) {
         // console.log("trigger", topic, des);
-        // e.preventDefault();
-        const res = await fetch(`${process.env.BACKEND_URL}tasks`, {
+        e.preventDefault();
+        const res = await fetch(`${("TURBOPACK compile-time value", "https://note-app-backend-sand.vercel.app/")}tasks`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -1109,12 +1110,12 @@ function AddData({ setNotes }) {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTrigger"], {
                     className: "sm:hidden flex",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                        variant: "outline",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "p-[4px] rounded-md bg-white text-black mr-1",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PlusIcon$3e$__["PlusIcon"], {}, void 0, false, {
                             fileName: "[project]/components/AddData.tsx",
                             lineNumber: 57,
-                            columnNumber: 37
+                            columnNumber: 73
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/AddData.tsx",

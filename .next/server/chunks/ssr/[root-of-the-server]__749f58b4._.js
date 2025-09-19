@@ -21,7 +21,7 @@ __turbopack_context__.s({
 });
 async function getData() {
     try {
-        const data = await fetch(`${process.env.BACKEND_URL}tasks`);
+        const data = await fetch(`${("TURBOPACK compile-time value", "https://note-app-backend-sand.vercel.app/")}tasks`);
         const res = await data.json();
         console.log(res, "data from function");
         return res.tasks;
